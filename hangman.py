@@ -7,8 +7,8 @@ import random									# Grab libraries that aren't already preloaded
 from hangmanResource import HangmanPrintables	# Grab our utilities class (must be in same directory)
 
 class hangman(HangmanPrintables):
-	wordSoFar = ""					# String
-	lettersGuessed = {""}			# Set
+	wordSoFar = ""													# String
+	lettersGuessed = {""}											# Set
 
 	def getMysteryWord(self):
 		# Creating the lists for the combo of words
@@ -36,7 +36,7 @@ class hangman(HangmanPrintables):
 
 
 	def main(self):
-		mysteryWord = self.getMysteryWord()							# call native method
+		mysteryWord = self.getMysteryWord()							# call included method
 		wrongGuesses = 0;											# int
 
 		self.printGameStart(mysteryWord)
