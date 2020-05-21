@@ -1,15 +1,12 @@
 root = true
 
-[*]
-end_of_line = lf
-insert_final_newline = true
-
-# Matches multiple files with brace expansion notation
-[*.{py}]
-charset = utf-8
-indent_style = tab
-indent_size = 4
+[*.{py,rst,txt}]
+indent_style = space
 trim_trailing_whitespace = true
+indent_size = 4
+end_of_line = LF
 
-[*.md]
-trim_trailing_whitespace = false
+[*.yml]
+indent_style = space
+indent_size = 2
+end_of_line = LF
