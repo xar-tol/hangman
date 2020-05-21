@@ -4,9 +4,9 @@
 to new members of the Robotics Club of Central Florida """
 
 import random									# Grab libraries that aren't already preloaded
-from hangmanResource import hangmanPrintables	# Grab our utilities class (must be in same directory)
+from hangmanResource import HangmanPrintables	# Grab our utilities class (must be in same directory)
 
-class hangman(hangmanPrintables):
+class hangman(HangmanPrintables):
 	wordSoFar = ""					# String
 	lettersGuessed = {""}			# Set
 
