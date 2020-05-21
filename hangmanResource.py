@@ -5,7 +5,7 @@
 # This class contains quick grab printing utilities for hangman.
 # Plus one building utility.
 
-class hangmanPrintables:
+class HangmanPrintables:
 	incorrectGuesses = 0
 
 	def getPrintableHangman(self):
