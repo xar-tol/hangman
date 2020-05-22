@@ -6,93 +6,83 @@
 # Plus one building utility.
 
 
-def get_printable_hangman():
-    return ["""
-        ------
-        |    |
-             |
-             |
-             |
-             |
-     ==========
-     """, """
-        ------
-        |    |
-      [o o]  |
-             |
-             |
-             |
-     ==========
-     """,
-            """
-        ------
-        |    |
-      [o o]  |
-        |    |
-             |
-             |
-     ==========
-     """,
-            """
-        ------
-        |    |
-      [o o]  |
-       /|    |
-             |
-             |
-     ==========
-     """,
-            """
-        ------
-        |    |
-      [o o]  |
-       /|\\   |
-             |
-             |
-     ==========
-     """,
-            """
-        ------
-        |    |
-      [o o]  |
-       /|\\   |
-        |    |
-             |
-     ==========
-     """,
-            """
-        ------
-        |    |
-      [o o]  |
-       /|\\   |
-        |    |
-       /     |
-     ==========
-     """,
-            """
-        ------
-        |    |
-      [o o]  |
-       /|\\   |
-        |    |
-       / \\   |
-     ==========
-     """]
-
-
-def print_game_over():
-    # Prints out a game over screen
-    print("""
-    +-----------+
-    | GAME OVER |
-    +-----------+
-    """)
-
-
 class HangmanPrintables:
     incorrect_guesses = 0
     word_so_far = ""
     letters_guessed = {""}
+
+    def get_printable_hangman(self):
+        return ["""
+            ------
+            |    |
+                 |
+                 |
+                 |
+                 |
+         ==========
+         """, """
+            ------
+            |    |
+          [o o]  |
+                 |
+                 |
+                 |
+         ==========
+         """,
+                """
+            ------
+            |    |
+          [o o]  |
+            |    |
+                 |
+                 |
+         ==========
+         """,
+                """
+            ------
+            |    |
+          [o o]  |
+           /|    |
+                 |
+                 |
+         ==========
+         """,
+                """
+            ------
+            |    |
+          [o o]  |
+           /|\\   |
+                 |
+                 |
+         ==========
+         """,
+                """
+            ------
+            |    |
+          [o o]  |
+           /|\\   |
+            |    |
+                 |
+         ==========
+         """,
+                """
+            ------
+            |    |
+          [o o]  |
+           /|\\   |
+            |    |
+           /     |
+         ==========
+         """,
+                """
+            ------
+            |    |
+          [o o]  |
+           /|\\   |
+            |    |
+           / \\   |
+         ==========
+         """]
 
     def print_game_start(self, word):
         # Prints out the starting screen and rules
@@ -120,9 +110,17 @@ class HangmanPrintables:
         +----------+
         """)
 
+    def print_game_over(self):
+        # Prints out a game over screen
+        print("""
+        +-----------+
+        | GAME OVER |
+        +-----------+
+        """)
+
     def print_hangman(self):
         # Print the hangman corresponding to the number of attempts used
-        printable_hangman = get_printable_hangman()
+        printable_hangman = self.get_printable_hangman()
         print(printable_hangman[self.incorrect_guesses])
 
     def print_progress(self, wrong_guesses):

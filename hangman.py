@@ -3,8 +3,8 @@
 """ I created this simple project to demonstrate all the basic aspects of Python
 to new members of the Robotics Club of Central Florida """
 
-import random  # Grab libraries that aren't already preloaded
-from hangmanResource import HangmanPrintables  # Grab our utilities class (must be in same directory)
+import random                                   # Grab libraries that aren't already preloaded
+from hangmanResource import HangmanPrintables   # Grab our utilities class (must be in same directory)
 
 
 def get_mystery_word():
